@@ -28,5 +28,37 @@ $(document).ready( function() {
       var bAudio = $('#bAudio')
       bAudio[0].play();
     }
-   });
+  });
+
+  var instrument = $('.instrument')
+  var buttons = instrument.children('button')
+
+  buttons.on('click', function(event) {
+    event.preventDefault()
+    var button = $(this)
+    if (button.hasClass("c")) {
+      var cAudio = $('#cAudio')
+      cAudio[0].play();
+    } else if (button.hasClass("d")) {
+      var dAudio = $('#dAudio')
+      dAudio[0].play();
+    } else if (button.hasClass("e")) {
+      var eAudio = $('#eAudio')
+      eAudio[0].play();
+    } else if (button.hasClass("f")) {
+      var fAudio = $('#fAudio')
+      fAudio[0].play();
+    } else if (button.hasClass("g")) {
+      var gAudio = $('#gAudio')
+      gAudio[0].play();
+    } else if (button.hasClass("a")) {
+      var aAudio = $('#aAudio')
+      aAudio[0].play();
+    } else if (button.hasClass("b")) {
+      var bAudio = $('#bAudio')
+      bAudio[0].play();
+    }
+    // console.log(this); //the object you are interating with, in thiscase the button
+    // console.log(event); //Event Object
+  })
 });
