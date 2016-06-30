@@ -9,20 +9,21 @@ $(document).ready( function() {
 
   $('body').keypress(function(e){
     if(e.key == 'c'){
-      cAudio[0].play();
+      var sound = cAudio[0].play();
     } else if (e.key == 'd') {
-      dAudio[0].play();
+      var sound = dAudio[0].play();
     } else if (e.key == 'e') {
-      eAudio[0].play();
+      var sound = eAudio[0].play();
     } else if (e.key == 'f') {
-      fAudio[0].play();
+      var sound = fAudio[0].play();
     } else if (e.key == 'g') {
-      gAudio[0].play();
+      var sound = gAudio[0].play();
     } else if (e.key == 'a') {
-      aAudio[0].play();
+      var sound = aAudio[0].play();
     } else if (e.key == 'b') {
-      bAudio[0].play();
+      var sound = bAudio[0].play();
     }
+    sound.currentTime = 0
   });
 
   var instrument = $('.instrument')
@@ -32,20 +33,23 @@ $(document).ready( function() {
     event.preventDefault()
     var button = $(this)
     if (button.hasClass("c")) {
-      cAudio[0].play();
+      var sound = cAudio[0]
     } else if (button.hasClass("d")) {
-      dAudio[0].play();
+      var sound = dAudio[0]
     } else if (button.hasClass("e")) {
-      eAudio[0].play();
+      var sound = eAudio[0]
     } else if (button.hasClass("f")) {
-      fAudio[0].play();
+      var sound = fAudio[0]
     } else if (button.hasClass("g")) {
-      gAudio[0].play();
+      var sound = gAudio[0]
     } else if (button.hasClass("a")) {
-      aAudio[0].play();
+      var sound = aAudio[0]
     } else if (button.hasClass("b")) {
-      bAudio[0].play();
+      var sound = bAudio[0]
     }
+    sound.play()
+    sound.currentTime = 0
+
     // console.log(this); //the object you are interating with, in thiscase the button
     // console.log(event); //Event Object
   })
